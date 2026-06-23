@@ -1,6 +1,8 @@
-This repository contains the code for the system outlined in the [Central Bookings](specs.pdf) specifications document
-from the final project of CSCI 41: Information Management, a course offered in Ateneo de Manila University by the Department
-of Information Systems and Computer Science.
+### Background
+
+This project is based on the *Central Bookings* final project case for CSCI 41 (Information Management) at Ateneo de Manila University.
+
+It has been independently reimplemented and extended as a portfolio project.
 
 ### Features
 - Implementation of CRUD operations.
