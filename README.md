@@ -22,8 +22,16 @@ It has been independently reimplemented and extended as a portfolio project.
 ### Database Design
 
 The database is designed around the lifecycle of an event booking system. Organizers create events that are scheduled at venues, while customers
-purchase tickets through transactions. Ticket ownership is separated from purchase records to support booking management and events analytics.
+purchase tickets through transactions.
 
 The ERD below illustrates the core entities and their relationships.
 
 ![Central Bookings ERD](docs/cb-erd.png)
+
+#### Design Decisions
+
+The following assumptions were made during the design of the database:
+
+1. `CUSTOMER` may purchase multiple tickets across different events to support purchasing for multiple event participants.
+2. `TICKET` and `TRANSACTION` are modeled separately, allowing the system to track individual tickets while preserving the transactions they are from.
+3. `EVENT` references `VENUE` directly, scheduling conflicts are enforced through constraints at the controller level.
